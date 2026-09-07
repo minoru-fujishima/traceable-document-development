@@ -281,10 +281,77 @@ What TDD manages is **making explicit what is currently adopted and
 tracing the relationship between that Document State and the Document**.
 
 Consistency with the DSR also does not guarantee that a Document is well
-written. Readability, structure, repetition, transitions between
-sections, and the amount of explanation are separate quality dimensions.
-Normal document-quality review should therefore be performed when needed
-even after bidirectional traceability has been checked.
+written. Bidirectional traceability checks whether required claims have
+been preserved correctly and whether unsupported or rejected claims have
+entered the Document; it does not by itself guarantee the quality of the
+prose. Document quality should therefore be reviewed separately when
+needed after bidirectional traceability has been checked.
+
+Document-quality review may treat at least the following dimensions
+independently when they are relevant.
+
+### Over-defensiveness
+
+A DSR may retain conditions, qualifications, and Negative Knowledge to
+control claim strength or prevent rejected ideas from being revived.
+Not all of these need to be stated explicitly in the Document.
+
+Review whether a qualification is actually needed for the logic of the
+Document or is present only to preempt a possible misunderstanding. Also
+check whether the same defensive boundary is repeated in multiple
+places.
+
+Necessary qualifications must not be removed in a way that strengthens
+a claim beyond the Document State. At the same time, defensive language
+should not be transferred mechanically into the Document merely because
+it is present in the DSR.
+
+### Readability
+
+Sentences and paragraphs may each be correct while the Document as a
+whole remains difficult to read. Review flow, structure, repetition,
+transitions between sections, order of explanation, amount of
+explanation, and unnatural repetition of the same terms.
+
+This review is not a license to change the claims. If improving
+readability introduces a new important claim, removes a necessary
+condition, or otherwise changes the Document State, the process returns
+to the DSR.
+
+### Abstract expressions
+
+Review whether abstract words and expressions actually carry
+information.
+
+Abstraction is not itself a problem. An abstract term may be necessary
+because it accurately groups several concrete cases, expresses a
+technical concept, or preserves a distinction that matters to the
+argument.
+
+However, abstract expressions can also be inserted mainly to make prose
+flow smoothly while leaving unclear what they refer to. This is
+particularly relevant in LLM-generated prose, where concrete content may
+be followed by an abstract label that is then used to connect to the
+next sentence or paragraph, making the reasoning appear smoother than
+the underlying logic warrants.
+
+For an abstract word or expression, ask:
+
+**“If this expression is removed or replaced by a more concrete
+description, is any information lost?”**
+
+If removing or concretizing the expression does not change the meaning,
+the expression may not be adding information. When a concrete
+description makes the meaning clearer, prefer the concrete description.
+
+Conversely, if removing the expression would lose an important
+distinction, technical meaning, or a concept that accurately groups
+multiple concrete cases, the abstraction has a function and should be
+retained.
+
+The purpose of this review is not to reduce the number of abstract
+words. It is to determine **whether the abstraction carries
+information**.
 
 If a document-quality revision does not change the Document State, the
 Document can be revised directly. If it introduces a new important
