@@ -32,35 +32,30 @@ Dialogue → DSR ⇄ Document
 
 ## Quick start with an LLM
 
-You can introduce TDD after an exploratory dialogue has already begun.
+TDD can be introduced after an exploratory dialogue has already begun.
 You do not need to use TDD from the start of the conversation.
 
-After discussing the subject freely with an LLM, give it the following
-instruction:
+1. Download `TDD.md` from this repository.
+2. Attach `TDD.md` to the LLM conversation in which you are developing
+   the document.
+3. After discussing the subject freely, give the LLM the following
+   instruction:
 
 > I want to develop a document from our discussion so far using
-> Traceable Document Development (TDD), as defined in the following
-> GitHub repository:
+> Traceable Document Development (TDD).
 >
-> https://github.com/minoru-fujishima/traceable-document-development
+> Read the attached `TDD.md` in full and follow the procedure defined
+> there to create a DSR from our discussion so far.
 >
-> Read the repository README and `TDD.md`, then follow the procedure
-> defined there to create a DSR from our discussion so far.
->
-> If you cannot access and read `TDD.md`, do not infer its contents or
-> continue from an assumed version of TDD. Tell me that you could not
-> read it.
+> Do not infer procedures that are not defined in `TDD.md`, and stop
+> after creating the DSR for now.
 
 The expected first result is a DSR representing the current Document
-State extracted from the preceding dialogue. The DSR can then be
-reviewed and revised before a Document is generated.
+State extracted from the preceding dialogue. Review and revise the DSR
+before proceeding to Document generation.
 
-Once TDD has been loaded, continue to use `TDD.md` as the operational
-procedure for subsequent document development rather than treating this
-as a one-time DSR-generation prompt.
-
-If the LLM cannot access `TDD.md` through GitHub, download `TDD.md` and
-provide it directly to the LLM instead.
+Continue to use the attached `TDD.md` as the operational specification
+throughout subsequent document development.
 
 ## Basic workflow
 
