@@ -89,6 +89,7 @@ DSR item explicitly.
 └── example/
     ├── README.md
     ├── DSR.md
+    ├── references.bib
     └── document.md
 ```
 
@@ -108,15 +109,19 @@ document development into maintaining a large management table.
 
 ### `example/`
 
-A minimal fictional worked example containing:
+A minimal fictional worked example of a research group's project-file
+backup policy containing:
 
 -   a completed DSR,
+-   a `references.bib` registry for externally verified sources,
 -   the resulting reader-facing document, and
 -   a README explaining how to compare them.
 
-The example also shows a Document → DSR correction: a new claim that
-appeared during document development was returned to the DSR before
-being retained in the final document.
+The example shows how external evidence is traced through the DSR without
+being confused with the group's own decisions, how a rejected claim is
+retained as Negative Knowledge, how unresolved implementation choices
+remain open rather than being invented during document generation, and
+how DSR ⇄ Document traceability is checked in both directions.
 
 ## Negative Knowledge
 
