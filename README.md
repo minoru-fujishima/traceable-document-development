@@ -30,6 +30,38 @@ Dialogue → DSR ⇄ Document
 -   **Document** is generated from the current DSR and checked against
     it in both directions.
 
+## Quick start with an LLM
+
+You can introduce TDD after an exploratory dialogue has already begun.
+You do not need to use TDD from the start of the conversation.
+
+After discussing the subject freely with an LLM, give it the following
+instruction:
+
+> I want to develop a document from our discussion so far using
+> Traceable Document Development (TDD), as defined in the following
+> GitHub repository:
+>
+> https://github.com/minoru-fujishima/traceable-document-development
+>
+> Read the repository README and `TDD.md`, then follow the procedure
+> defined there to create a DSR from our discussion so far.
+>
+> If you cannot access and read `TDD.md`, do not infer its contents or
+> continue from an assumed version of TDD. Tell me that you could not
+> read it.
+
+The expected first result is a DSR representing the current Document
+State extracted from the preceding dialogue. The DSR can then be
+reviewed and revised before a Document is generated.
+
+Once TDD has been loaded, continue to use `TDD.md` as the operational
+procedure for subsequent document development rather than treating this
+as a one-time DSR-generation prompt.
+
+If the LLM cannot access `TDD.md` through GitHub, download `TDD.md` and
+provide it directly to the LLM instead.
+
 ## Basic workflow
 
 A minimal TDD workflow is:
@@ -67,9 +99,10 @@ DSR item explicitly.
 
 ### `TDD.md`
 
-The operational description of the TDD workflow.
+The operational specification of the TDD workflow.
 
-Start here if you want to understand how TDD is used.
+Read this file before applying TDD. The README introduces the method,
+but `TDD.md` defines the procedure to follow.
 
 ### `DSR-template.md`
 
