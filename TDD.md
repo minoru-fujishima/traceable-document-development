@@ -37,7 +37,7 @@ The basic procedure for using TDD is:
 2.  **Extract important current claims into the DSR.**
 3.  **Retain rejected claims whose reuse would be risky as Negative
     Knowledge.**
-4.  **Verify claims against external information when necessary.**
+4.  **Verify claims against external information when necessary and preserve the sources used.**
 5.  **Generate the Document from the latest DSR.**
 6.  **Check DSR → Document.**
 7.  **Check Document → DSR.**
@@ -113,7 +113,9 @@ The following information can also be distinguished when needed.
 Where the information came from.
 
 **Evidence**\
-What supports the claim.
+What supports the claim. When an external source is used to verify a claim, its bibliographic or identifying information should normally be preserved in `references.bib`, and the DSR claim may refer to it using `\cite{key}`. In the DSR, `\cite{}` does not mean that the citation must be displayed in the final Document; it represents a trace from the claim to its external verification source.
+
+`references.bib` is not necessarily the bibliography displayed in the final Document. It is the registry of external sources used for verification in the TDD project. In addition to scholarly publications, reports, standards, web resources, and other verification materials can be recorded as BibTeX entries with the information needed to identify them. Thus, `references.bib` may be retained even for genres such as articles that do not display references in the final Document.
 
 **Derivation**\
 The reasoning by which the claim was derived.
@@ -125,8 +127,7 @@ Why a particular judgment or method was adopted.
 A07
 Existing method X causes problem Z under condition Y.
 
-Evidence:
-- [@reference1]
+\cite{reference1}
 
 Derivation:
 Measurement result P together with previous report Q
@@ -270,7 +271,24 @@ each artifact only needs to remain traceable to the DSR version used as
 its reference; the artifacts do not all need to be updated at the same
 time.
 
-## 7. External verification and document quality
+## 7. Preserving project state
+
+When TDD is used over an extended process, the DSR, the external sources used for verification, and the generated Document can be preserved together as a project. A basic structure is:
+
+``` text
+project/
+├── DSR.md
+├── references.bib
+└── document.md
+```
+
+`DSR.md` records the current Document State, `references.bib` is the registry of external sources used for verification, and `document.md` is an artifact generated from the DSR. These are not three equivalent sources of truth. The DSR remains the reference for the current Document State; sources are used to verify source-dependent claims in the DSR; and the Document is generated and checked against the DSR.
+
+The Document filename may be adapted to the genre, for example `article.md`, `report.md`, or `paper.md`. A project that uses no external sources does not need to contain `references.bib`.
+
+This persistence structure does not replace TDD's central relationship. Dialogue remains the space for exploration, the DSR retains the current Document State, and the source registry preserves provenance for claims that require external verification.
+
+## 8. External verification and document quality
 
 TDD does not automatically establish whether the claims recorded in a
 DSR are true. Claims that require verification must still be checked
@@ -318,6 +336,18 @@ readability introduces a new important claim, removes a necessary
 condition, or otherwise changes the Document State, the process returns
 to the DSR.
 
+### Continuity
+
+Sentences and paragraphs may each be correct while important claims are merely placed next to one another, leaving the reader unable to follow the reasoning of the Document.
+
+For each major claim, paragraph, or section, check whether the reader can understand **why the next point needs to be considered**. Examine whether the reason for moving from one point to the next has been lost across problems, Evidence, rejected hypotheses, revised questions, methods, results, and conclusions.
+
+Continuity does not require reproducing the actual Dialogue or research process chronologically. Exploration can contain unnecessary trial and error. The Document should instead construct a reader-facing chain of reasoning within what the DSR supports.
+
+The purpose is also not to create an appearance of human authorship by adding first-person expressions, emotional language, or rhetorical transitions. What matters is whether the reasoning connection by which one part makes the next part necessary has been preserved.
+
+If improving continuity requires a new important claim, that claim should not be added only to the Document; the process returns to the DSR.
+
 ### Abstract expressions
 
 Review whether abstract words and expressions actually carry
@@ -358,7 +388,7 @@ Document can be revised directly. If it introduces a new important
 claim, changes claim strength, changes a condition, or otherwise changes
 the Document State, the process returns to the DSR.
 
-## 8. Tailoring the level of management to the document
+## 9. Tailoring the level of management to the document
 
 Full TDD is not necessary for every document. For a short email or a
 simple edit, the cost of maintaining a DSR may exceed its benefit.
