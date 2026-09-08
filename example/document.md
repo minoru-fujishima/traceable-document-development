@@ -1,7 +1,9 @@
-# Moving the weekly meeting to Tuesday afternoon
+# Project file backup policy
 
-Our weekly meeting has been held on Monday morning, but that time has become difficult for several members because of recurring external commitments. Attendance records from the previous eight weeks also show that Monday has had the lowest attendance among the weekdays we considered.
+The research group will continue to use its synchronized location as the primary working location for active project files. However, the working files will not be the group's only means of recovery.
 
-Starting next month, the meeting will move to Tuesday afternoon to improve attendance under the team's current schedule. In the current availability check, all team members indicated that they can normally attend at that time.
+A separate recovery copy will also be maintained. The recovery arrangement will include a copy that is not continuously accessible from the active working environment, so that a compromise affecting accessible working files does not automatically expose every recovery copy to the same compromise.
 
-After the change, we will continue to track attendance and see whether the new schedule actually improves participation.
+The group will periodically test whether the recovery copy can actually be used to restore the project files rather than assuming that the existence of backup data guarantees successful recovery.
+
+This policy establishes the basic separation between the active working files and a recovery copy. The specific backup system, storage location, backup frequency, retention period, encryption implementation, and recovery-test schedule have not yet been selected.
