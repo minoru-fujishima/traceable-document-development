@@ -173,6 +173,50 @@ integrated into one paragraph, and one important claim may be explained
 across several sections. TDD fixes the content that must be preserved,
 not the presentation order.
 
+For reader-facing Documents such as essays or articles, do not convert
+DSR claims one by one into separate sentences or paragraphs. Combine
+related claims into a chain of reasoning in which the reader can follow
+**why the next point needs to be considered**. Paragraphs should not be
+split mechanically merely to make the page look easy to scan. As a
+general rule, a paragraph should contain one developing unit of thought.
+For example, a concrete experience may lead to an initial interpretation;
+a point that the interpretation cannot explain may require another idea;
+and that idea may in turn be revised before a conclusion is reached.
+Such movement can remain within a connected passage when it belongs to
+one developing line of thought.
+
+The aim is neither to reproduce the chronology of the Dialogue nor to
+present only the final conclusions as efficiently as possible. Within
+what the DSR supports, reconstruct prose in which the reader can follow
+**why the reasoning develops toward its conclusion**. Avoid frequent
+short paragraphs or one-sentence paragraphs used only for emphasis.
+Paragraph boundaries should normally coincide with boundaries between
+units of thought.
+
+### Choosing the title
+
+Do not choose the title mechanically from the starting point of the
+Dialogue or from its most conspicuous episode. Base it on the **central
+theme** that becomes clear through constructing the Document. The event
+that triggered the exploration and the theme ultimately addressed by the
+Document may differ.
+
+For reader-facing Documents such as essays or articles, avoid titles that
+merely summarize all of the contents or list the concepts used. Instead,
+look for the shortest expression of what the Document ultimately turns
+out to be about when read as a whole.
+
+A title does not need to state the full conclusion in advance. A strong
+title can make sense before reading while acquiring a deeper meaning
+after the reader has followed the reasoning of the Document. If a
+subtitle is used, it should not merely restate the theme. It may instead
+provide a concrete event or question that gives the reader an entry point
+into the more abstract theme.
+
+After choosing the title, check that the theme indicated by the title
+matches the center of the Document. Do not strengthen claims or introduce
+a generalization in the title merely to make the title more compelling.
+
 Writing the Document can reveal relationships or new claims that were
 not previously explicit. This is not itself a problem. However, an
 important new claim should not simply be added to the Document and
@@ -306,7 +350,12 @@ prose. Document quality should therefore be reviewed separately when
 needed after bidirectional traceability has been checked.
 
 Document-quality review may treat at least the following dimensions
-independently when they are relevant.
+independently when they are relevant. These reviews should be performed
+at both the **sentence level and the section level**. Individual sentences
+may be acceptable while a section as a whole becomes over-defensive,
+repetitive, improperly abstracted, or discontinuous in its reasoning.
+Local prose quality and the quality of a larger unit of thought should
+therefore be checked separately.
 
 ### Over-defensiveness
 
