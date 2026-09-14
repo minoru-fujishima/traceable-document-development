@@ -4,7 +4,7 @@
 
 - **Title / Working title:** Project file backup policy
 - **Purpose:** Explain the research group's current decision for protecting project files against loss or unavailability.
-- **Current DSR version:** v5
+- **Current DSR version:** v3
 - **Baseline for:** `document.md`
 
 ## Current Document State
@@ -31,7 +31,7 @@
 
 **B03.** The recovery arrangement will include a copy that is not continuously accessible from the active working environment.
 
-- **Rationale:** This decision is intended to apply the verified principle in A04 so that a compromise affecting accessible working files does not automatically expose every recovery copy to the same compromise.
+- **Rationale:** This applies the verified principle in A04 by keeping at least one recovery copy outside continuous access from the active working environment.
 
 **B04.** The group will periodically test whether its recovery copy can actually be used for recovery.
 
@@ -50,7 +50,7 @@
 **NK01.** “If backup data exist, successful recovery can be assumed.”
 
 - **Disposition:** Rejected
-- **Reason:** The verified guidance calls for regular testing of backup availability and integrity.
+- **Reason:** A03 shows that the verified guidance calls for regular testing of backup availability and integrity.
 
 ## Open / Unresolved
 
@@ -71,5 +71,3 @@
 | v1 | Initial state: use a synchronized working location for project files |
 | v2 | Added externally verified backup and recovery principles |
 | v3 | Added the separate recovery copy, recovery testing, Negative Knowledge, scope limitations, and unresolved implementation questions |
-| v4 | Added evidence concerning synchronized cloud copies for further verification |
-| v5 | Removed the synchronized-cloud claim because it was not retained as directly verified evidence and aligned Negative Knowledge with the remaining verified basis |

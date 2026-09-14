@@ -9,7 +9,7 @@ During the discussion, the group considered how its synchronized working locatio
 ## Files
 
 - `DSR.md` records the current Document State used to generate the document.
-- `references.bib` records external sources used to verify source-dependent claims in the DSR.
+- In this Markdown/BibTeX example, `references.bib` records external sources used to verify source-dependent claims in the DSR.
 - `document.md` is the resulting reader-facing document.
 
 Read `DSR.md` first, inspect the external-source trace in `references.bib`, and then compare the DSR with `document.md`.

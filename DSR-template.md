@@ -13,7 +13,7 @@
 
 ## Current Document State
 
-Record the important claims that are currently valid for generating the document.
+Record the important claims that may currently be used to create the document.
 
 A claim should normally be small enough that it can be assessed independently, but it does not need to be reduced to the smallest possible statement.
 
@@ -47,9 +47,9 @@ Keep only rejected claims that remain plausible enough to be accidentally reused
 
 ## Open / Unresolved
 
-Use this section for issues that have not yet become part of the current Document State.
+Use this section for questions, uncertainties, decisions, or verification needs that remain unresolved.
 
-**U01.** [Question, uncertainty, or item requiring verification]
+**U01.** [Question, uncertainty, decision, or item requiring verification]
 
 - **Needed:** [evidence, decision, calculation, source, etc.]
 
@@ -68,13 +68,14 @@ Record changes when version tracking is useful.
 
 1. Explore freely in Dialogue.
 2. Move important current claims into the DSR.
-3. Verify claims when external evidence is required.
+3. Verify claims against external information when necessary and preserve the sources used.
 4. Retain selected rejected claims as Negative Knowledge when their reuse would be risky.
 5. Generate the Document from the latest DSR.
 6. Check **DSR → Document** for missing or altered claims.
 7. Check **Document → DSR** for new, unsupported, strengthened, contradicted, or revived claims.
 8. If an important change affects the Document State, update the DSR before finalizing it in the Document.
+9. Revise the Document from the updated DSR and check it again.
 
-Not every claim needs Status, Source, Evidence, Derivation, Rationale, or other metadata. Use them only where they help maintain the Document State or support verification.
+Not every claim needs Status, Source, Evidence, Derivation, or Rationale. Use these fields only where they help maintain the Document State or support verification.
 
 The DSR is not a summary of the Dialogue and is not an outline of the Document. It is the external record of the current Document State.

@@ -24,8 +24,8 @@ Dialogue → DSR ⇄ Document
 ```
 
 -   **Dialogue** is the exploration space.
--   **Document State** is the set of currently usable claims,
-    conditions, decisions, and other information.
+-   **Document State** is the important content that may currently be used
+    in the Document.
 -   **Document State Register (DSR)** externalizes that state.
 -   **Document** is generated from the current DSR and checked against
     it in both directions.
@@ -65,7 +65,8 @@ A minimal TDD workflow is:
 2.  Extract important current claims into a DSR.
 3.  Retain selected rejected claims as Negative Knowledge when their
     accidental reuse would be risky.
-4.  Verify claims when external evidence is required.
+4.  Verify claims against external information when necessary and preserve the
+    sources used.
 5.  Generate the Document from the latest DSR.
 6.  Check DSR → Document for missing or altered claims.
 7.  Check Document → DSR for new, unsupported, strengthened,
@@ -113,7 +114,7 @@ A minimal fictional worked example of a research group's project-file
 backup policy containing:
 
 -   a completed DSR,
--   a `references.bib` registry for externally verified sources,
+-   a `references.bib` registry for external verification sources in this Markdown/BibTeX example,
 -   the resulting reader-facing document, and
 -   a README explaining how to compare them.
 
@@ -157,12 +158,15 @@ added to the DSR, and then retained in the Document.
 ## What TDD does not do
 
 TDD does not guarantee that a claim is true. Claims that require
-external evidence still need to be checked against appropriate sources,
-data, calculations, experiments, standards, or expert judgment.
+external evidence still need to be checked against appropriate original
+materials, literature, data, calculations, experiments, institutional
+frameworks or standards, or expert judgment.
 
 Traceability and writing quality are also different concerns. A document
 can be fully consistent with its DSR and still be poorly organized or
-difficult to read. Normal document-quality review remains necessary.
+difficult to read. Document quality should be reviewed separately for
+issues such as over-defensiveness, readability, continuity, and
+uninformative abstraction.
 
 TDD is also not intended for every writing task. For a short email or a
 simple edit, maintaining a DSR may cost more than it provides. The
@@ -184,7 +188,4 @@ natural-language documents are developed through exploratory human--LLM
 interaction.
 
 This repository makes that procedure available for use, criticism,
-modification, and comparison with alternative approaches. If an existing
-or future method provides equal or better traceability and reliability
-with less overhead, adopting or integrating it is entirely consistent
-with the purpose of this project.
+modification, and comparison with alternative approaches.

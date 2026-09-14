@@ -46,9 +46,10 @@ The basic procedure for using TDD is:
 
 Dialogue is used for free exploration. The object of management is not
 the exploration history itself, but the current Document State extracted
-from it. An LLM can assist with exploration, organization, research,
-document generation, and checking, but the human decides which claims
-are adopted as the current Document State.
+from it. Who performs exploration, organization, research support,
+document generation, or checking is not a condition for TDD to hold.
+Which claims are adopted as the current Document State is based on the
+current judgment formed through the Dialogue.
 
 ## 2. Creating a DSR from Dialogue
 
@@ -113,9 +114,9 @@ The following information can also be distinguished when needed.
 Where the information came from.
 
 **Evidence**\
-What supports the claim. When an external source is used to verify a claim, its bibliographic or identifying information should normally be preserved in `references.bib`, and the DSR claim may refer to it using `\cite{key}`. In the DSR, `\cite{}` does not mean that the citation must be displayed in the final Document; it represents a trace from the claim to its external verification source.
+What supports the claim. When an external source is used to verify a claim, information sufficient to identify that source is preserved, and a trace from the claim to the source used for verification is maintained.
 
-`references.bib` is not necessarily the bibliography displayed in the final Document. It is the registry of external sources used for verification in the TDD project. In addition to scholarly publications, reports, standards, web resources, and other verification materials can be recorded as BibTeX entries with the information needed to identify them. Thus, `references.bib` may be retained even for genres such as articles that do not display references in the final Document.
+In a standard manual Markdown / BibTeX workflow, bibliographic or identifying information for external sources used in verification can be stored in `references.bib`, and DSR claims can refer to them using `\cite{key}` when useful. In this use, `\cite{}` does not instruct the final Document to display a citation; it represents a trace from the claim to its external verification source. `references.bib` need not be limited to the bibliography displayed in the final Document. It can serve as a registry of external sources used for verification in the TDD project. In addition to scholarly publications, reports, standards, web resources, and other verification materials can be recorded as BibTeX entries with the information needed to identify them. Thus, `references.bib` can be retained even for genres such as articles that do not display references in the final Document.
 
 **Derivation**\
 The reasoning by which the claim was derived.
@@ -164,72 +165,27 @@ not adopted in the current document.
 
 ## 4. Generating a Document from the DSR
 
-The Document is generated using the latest DSR as its reference. The
-order of DSR items, however, does not have to become the structure of
-the Document.
+The Document is generated using the latest DSR as its reference. The order of DSR items, however, does not have to become the structure of the Document.
 
-The DSR is a Document State, not an outline. Multiple DSR claims may be
-integrated into one paragraph, and one important claim may be explained
-across several sections. TDD fixes the content that must be preserved,
-not the presentation order.
+The DSR is a Document State, not an outline. Multiple DSR claims may be integrated into one paragraph, and one important claim may be explained across several sections. What is fixed is the content, not the structure of the prose.
 
-For reader-facing Documents such as essays or articles, do not convert
-DSR claims one by one into separate sentences or paragraphs. Combine
-related claims into a chain of reasoning in which the reader can follow
-**why the next point needs to be considered**. Paragraphs should not be
-split mechanically merely to make the page look easy to scan. As a
-general rule, a paragraph should contain one developing unit of thought.
-For example, a concrete experience may lead to an initial interpretation;
-a point that the interpretation cannot explain may require another idea;
-and that idea may in turn be revised before a conclusion is reached.
-Such movement can remain within a connected passage when it belongs to
-one developing line of thought.
+For reader-facing Documents such as essays or articles, do not convert DSR claims one by one into sentences or paragraphs. Instead, combine related claims and reconstruct prose in which **the reader can follow why the reasoning needs to develop toward its conclusion.** The aim is neither to reproduce the chronology of the Dialogue nor merely to arrange the final conclusions efficiently. Within what the DSR permits, construct a single line of reasoning in which, for example, a concrete experience gives rise to an initial interpretation, something that interpretation cannot explain leads to another idea, and that idea is revised further when necessary before reaching a conclusion. Paragraphs should not be split mechanically merely to look shorter or easier to read, or only for emphasis; the basic unit should be the span over which one line of thought develops.
 
-The aim is neither to reproduce the chronology of the Dialogue nor to
-present only the final conclusions as efficiently as possible. Within
-what the DSR supports, reconstruct prose in which the reader can follow
-**why the reasoning develops toward its conclusion**. Avoid frequent
-short paragraphs or one-sentence paragraphs used only for emphasis.
-Paragraph boundaries should normally coincide with boundaries between
-units of thought.
+Writing the Document can reveal relationships or new claims that were not previously explicit. This is not itself a problem. However, an important new claim should not simply be added to the Document and treated as established.
 
-### Choosing the title
-
-Do not choose the title mechanically from the starting point of the
-Dialogue or from its most conspicuous episode. Base it on the **central
-theme** that becomes clear through constructing the Document. The event
-that triggered the exploration and the theme ultimately addressed by the
-Document may differ.
-
-For reader-facing Documents such as essays or articles, avoid titles that
-merely summarize all of the contents or list the concepts used. Instead,
-look for the shortest expression of what the Document ultimately turns
-out to be about when read as a whole.
-
-A title does not need to state the full conclusion in advance. A strong
-title can make sense before reading while acquiring a deeper meaning
-after the reader has followed the reasoning of the Document. If a
-subtitle is used, it should not merely restate the theme. It may instead
-provide a concrete event or question that gives the reader an entry point
-into the more abstract theme.
-
-After choosing the title, check that the theme indicated by the title
-matches the center of the Document. Do not strengthen claims or introduce
-a generalization in the title merely to make the title more compelling.
-
-Writing the Document can reveal relationships or new claims that were
-not previously explicit. This is not itself a problem. However, an
-important new claim should not simply be added to the Document and
-treated as established.
-
-``` text
+```text
 new claim → verification → DSR update → Document update
 ```
 
-If the new claim is accepted after verification, it is added to the DSR
-first. The Document State is then updated before the claim is
-incorporated into the Document. This prevents important Document State
-from accumulating only inside the prose.
+If the new claim is established through verification, add it to the DSR and update the Document State before reflecting it in the Document. This prevents important Document State from accumulating only inside the prose.
+
+### Choosing the title
+
+Do not choose the title mechanically from the starting point of the Dialogue or from a conspicuous episode. Base it on the **central theme** that becomes clear through constructing the Document. The event that triggered the exploration and the theme ultimately addressed by the Document may differ.
+
+For reader-facing Documents such as essays or articles, rather than using a title that comprehensively summarizes the text or lists the concepts used, look for a short expression of “what this article was ultimately thinking about” after the text has been read in full. The title does not need to state the entire conclusion in advance. Ideally, it should make sense before reading and acquire **a deeper meaning than it initially had** after the reader has followed the reasoning. If a subtitle is used, it should not merely restate the theme; when useful, it can present a concrete event or question as an entry point to the theme.
+
+After choosing the title, check that the theme indicated by the title matches the center of the Document. Do not strengthen claims to fit the title or introduce a generalization in the title that is absent from the Document.
 
 ## 5. Checking the DSR and Document in both directions
 
@@ -260,17 +216,12 @@ in the DSR. In particular, look for the following exceptions.
     DSR
 -   **Contradicted** --- the Document contradicts the DSR
 -   **Negative Knowledge Conflict** --- a rejected claim has reappeared
--   **Uncertain** --- the correspondence cannot be determined
-    automatically and requires human review
+-   **Uncertain** --- the correspondence cannot be determined from the
+    information currently available
 
 Together, these two directions provide **bidirectional traceability**.
 
-This checking differs from simply asking an LLM to "read it again and
-look for problems." Open-ended self-critique leaves the choice of what
-to inspect to the LLM. TDD instead uses the DSR as an external criterion
-and makes the checking targets explicit. An LLM or other tool can be
-used to identify candidate exceptions, while a human reviews the
-important cases.
+This checking differs from open-ended self-critique that simply asks to “read it again and look for problems.” TDD uses the DSR as an external criterion and makes explicit what is to be checked.
 
 ### Return to the DSR when a problem is found
 
@@ -317,7 +268,7 @@ time.
 
 ## 7. Preserving project state
 
-When TDD is used over an extended process, the DSR, the external sources used for verification, and the generated Document can be preserved together as a project. A basic structure is:
+When TDD is used over an extended process, the DSR, a registry of external sources used for verification, and the generated Document can be preserved together as a project. The storage format is not a condition for TDD to hold. In a standard manual Markdown / BibTeX workflow, for example, they can be stored as follows:
 
 ``` text
 project/
@@ -326,9 +277,9 @@ project/
 └── document.md
 ```
 
-`DSR.md` records the current Document State, `references.bib` is the registry of external sources used for verification, and `document.md` is an artifact generated from the DSR. These are not three equivalent sources of truth. The DSR remains the reference for the current Document State; sources are used to verify source-dependent claims in the DSR; and the Document is generated and checked against the DSR.
+In this example, `DSR.md` records the current Document State, `references.bib` is the registry of external sources used for verification, and `document.md` is an artifact generated from the DSR. These are not three equivalent sources of truth. The DSR remains the reference for the current Document State; the source registry is used to verify source-dependent claims in the DSR; and the Document is generated and checked against the DSR.
 
-The Document filename may be adapted to the genre, for example `article.md`, `report.md`, or `paper.md`. A project that uses no external sources does not need to contain `references.bib`.
+The Document filename may be adapted to the genre, for example `article.md`, `report.md`, or `paper.md`. A project that uses no external sources does not need a source registry. In a manual Markdown / BibTeX workflow, `references.bib` can therefore be omitted in that case.
 
 This persistence structure does not replace TDD's central relationship. Dialogue remains the space for exploration, the DSR retains the current Document State, and the source registry preserves provenance for claims that require external verification.
 
@@ -336,8 +287,8 @@ This persistence structure does not replace TDD's central relationship. Dialogue
 
 TDD does not automatically establish whether the claims recorded in a
 DSR are true. Claims that require verification must still be checked
-against appropriate primary sources, literature, data, calculations,
-experiments, rules or standards, or expert judgment.
+against appropriate original materials, literature, data, calculations,
+experiments, institutional frameworks or standards, or expert judgment.
 
 What TDD manages is **making explicit what is currently adopted and
 tracing the relationship between that Document State and the Document**.
@@ -359,19 +310,9 @@ therefore be checked separately.
 
 ### Over-defensiveness
 
-A DSR may retain conditions, qualifications, and Negative Knowledge to
-control claim strength or prevent rejected ideas from being revived.
-Not all of these need to be stated explicitly in the Document.
+A DSR may retain conditions, qualifications, and Negative Knowledge to control claim strength or prevent rejected ideas from being revived. Not all of these need to be stated explicitly in the Document.
 
-Review whether a qualification is actually needed for the logic of the
-Document or is present only to preempt a possible misunderstanding. Also
-check whether the same defensive boundary is repeated in multiple
-places.
-
-Necessary qualifications must not be removed in a way that strengthens
-a claim beyond the Document State. At the same time, defensive language
-should not be transferred mechanically into the Document merely because
-it is present in the DSR.
+When reviewing the Document, distinguish qualifications that are necessary to its logic from those included only to preempt possible misunderstanding, and check whether the same defensive boundary is repeated in multiple places. Necessary qualifications must not be removed in a way that strengthens a claim, but defensive explanations should not be transferred mechanically into the Document merely because they are present in the DSR.
 
 ### Readability
 
@@ -439,24 +380,14 @@ the Document State, the process returns to the DSR.
 
 ## 9. Tailoring the level of management to the document
 
-Full TDD is not necessary for every document. For a short email or a
-simple edit, the cost of maintaining a DSR may exceed its benefit.
+Full TDD is not necessary for every document. For a short email or a simple edit, the management cost of creating a DSR may exceed its benefit.
 
-A DSR becomes more useful when the work involves a long exploratory
-process, hypotheses or problem formulations change during development,
-many claims or conditions must be maintained, rejected ideas are likely
-to reappear, multiple versions or multiple artifacts are being produced,
-or accuracy is important.
+A DSR becomes more useful when the work involves a long exploratory process, hypotheses change during development, many claims or conditions must be maintained, rejected ideas are likely to reappear, multiple versions or multiple artifacts are being produced, or accuracy is important.
 
-The level of management should therefore be tailored to the complexity,
-importance, and risk of the document.
+The level of management should be tailored to the complexity, importance, and risk of the document. Standard TDD does not require assigning an owner to every claim, saving every prompt, structuring all Dialogue, or recording Evidence for every claim.
 
-TDD does not require every claim to have a responsible owner, every
-prompt to be saved, all Dialogue to be structured, or every claim to
-contain complete Source, Evidence, Derivation, and Rationale fields.
-These can be added where needed.
+The core of TDD is to avoid turning Dialogue directly into a document by placing the current Document State between them.
 
-The purpose is not to create a larger management system. It is to keep
-the current Document State explicit enough that a complex document can
-be generated, revised, and checked without repeatedly reconstructing
-that state from the entire Dialogue.
+```text
+Dialogue → DSR ⇄ Document
+```
